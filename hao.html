@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复杂HTML示例</title>
+    <!-- 引入外部CSS文件以增强样式 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入jQuery库以简化JavaScript编程 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#news">新闻</a></li>
+            <li><a href="#contact">联系我们</a></li>
+            <li><a href="#about">关于我们</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- 主体内容 -->
+<main>
+    <section id="home">
+        <h1>Welcome to our website</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section id="news">
+        <h2>最新新闻</h2>
+        <!-- 新闻列表通过JavaScript动态加载 -->
+    </section>
+
+    <!-- 其他内容区域 -->
+</main>
+
+<!-- 脚本部分，用于添加交互性 -->
+<script>
+// 简单示例：点击导航链接时平滑滚动到相应部分
+$(".navbar a").click(function(e){
+    e.preventDefault();
+    var id = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(id).offset().top
+    }, 1500);
+});
+</script>
+
+</body>
+</html>
